@@ -1,0 +1,301 @@
+* [33m4ff4d3d[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m Initial commit
+* [33m05f17fc[m update for dv to improve stability
+* [33m8cc60d4[m update readme
+*   [33ma32768e[m Merge pull request #52 from Josh00-Lu/main
+[32m|[m[33m\[m  
+[32m|[m *   [33m4f03b99[m Merge branch 'CleanDiffuserTeam:main' into main
+[32m|[m [34m|[m[32m\[m  
+[32m|[m [34m|[m[32m/[m  
+[32m|[m[32m/[m[34m|[m   
+* [34m|[m [33m879897f[m Update README.md
+* [34m|[m [33m4d27872[m Update README.md
+[35m|[m * [33m403e066[m Fix name typo for DV-Maze2D-Seq-Dataset
+[35m|[m[35m/[m  
+*   [33m4043c6f[m Merge pull request #47 from Josh00-Lu/main
+[36m|[m[1;31m\[m  
+[36m|[m *   [33mc586f3a[m Merge branch 'CleanDiffuserTeam:main' into main
+[36m|[m [1;32m|[m[36m\[m  
+[36m|[m [1;32m|[m[36m/[m  
+[36m|[m[36m/[m[1;32m|[m   
+* [1;32m|[m   [33m450d4bd[m Merge pull request #46 from Josh00-Lu/main
+[1;34m|[m[1;35m\[m [1;32m\[m  
+[1;34m|[m [1;35m|[m * [33mef96881[m Update pipeline list
+[1;34m|[m [1;35m|[m[1;35m/[m  
+[1;34m|[m * [33m24ed3b8[m Update Support for Diffusion Veteran (DV)
+[1;34m|[m * [33mec0c2d5[m Update DV's networks
+[1;34m|[m * [33m81f57b9[m Add support of weight regression
+[1;34m|[m * [33me336794[m Update DV's Dataset
+[1;34m|[m[1;34m/[m  
+* [33m7f0237a[m Update README.md
+*   [33ma24084a[m Merge branch 'main' of https://github.com/CleanDiffuserTeam/CleanDiffuser into main
+[1;36m|[m[31m\[m  
+[1;36m|[m * [33m7907b2c[m update
+[1;36m|[m * [33m5cc7529[m update
+[1;36m|[m * [33m146a146[m Fix the no condition error, see #29
+* [31m|[m   [33m8143b66[m Merge branch 'main2' into 'main'
+[32m|[m[33m\[m [31m\[m  
+[32m|[m * [31m\[m   [33m1f4ca05[m Merge branch 'main' into 'main2'
+[32m|[m [31m|[m[32m\[m [31m\[m  
+[32m|[m [31m|[m[32m/[m [31m/[m  
+[32m|[m[32m/[m[31m|[m [31m/[m   
+[32m|[m [31m|[m[31m/[m    
+* [31m/[m [33mc88b287[m Initial commit
+ [31m/[m  
+* [33m4e025cc[m Update readme
+* [33mf5f7246[m Update readme
+* [33m76f8142[m Update unit tests
+*   [33md80e582[m Merge pull request #28 from CleanDiffuserTeam/qgpo
+[36m|[m[1;31m\[m  
+[36m|[m * [33m7b143cd[m add qgpo
+[36m|[m * [33m09b453b[m add new item into gitignore
+[36m|[m * [33mda14b06[m add new item into .gitignore
+[36m|[m[36m/[m  
+*   [33m307acc4[m Merge branch 'main' of https://github.com/CleanDiffuserTeam/CleanDiffuser into main
+[1;32m|[m[1;33m\[m  
+[1;32m|[m * [33md37f3be[m Rewrite tutorials 1 & 2 in Jupyter Notebook for better understanding and more convenient use.
+* [1;33m|[m [33m9234f84[m add new item in .gitignore
+[1;33m|[m[1;33m/[m  
+[1;33m|[m * [33m340afa4[m[33m ([m[1;36mHEAD[m[33m)[m Update README.md
+[1;33m|[m * [33m3a87bb8[m Update README.md
+[1;33m|[m * [33m813cdb1[m Update README.md
+[1;33m|[m * [33m8b15c36[m Update README.md
+[1;33m|[m * [33m113fd74[m Update README.md
+[1;33m|[m * [33maf19784[m Update README.md
+[1;33m|[m * [33m708372b[m Update README.md
+[1;33m|[m * [33m836c15b[m Update README.md
+[1;33m|[m * [33m1486072[m Update README.md
+[1;33m|[m * [33ma338c9a[m Update README.md
+[1;33m|[m * [33mb8c0c5f[m Update README.md
+[1;33m|[m * [33m6094888[m Update README.md
+[1;33m|[m * [33m0ded727[m Update README.md
+[1;33m|[m * [33ma85a269[m Update README.md
+[1;33m|[m * [33m202cf6d[m Update README.md
+[1;33m|[m * [33m00ad805[m Update README.md
+[1;33m|[m * [33m4389cce[m Update README.md
+[1;33m|[m * [33mbc2e356[m Update README.md
+[1;33m|[m * [33ma014269[m Update README.md
+[1;33m|[m * [33m280fe67[m Update README.md
+[1;33m|[m * [33m71b89a4[m Initial commit
+[1;33m|[m * [33mdea549f[m[33m ([m[1;31morigin/lightning[m[33m)[m add unet2d nn diffusion
+[1;33m|[m *   [33m2b43674[m Merge branch 'lightning' of https://github.com/CleanDiffuserTeam/CleanDiffuser into lightning
+[1;33m|[m [1;36m|[m[31m\[m  
+[1;33m|[m [1;36m|[m * [33m045064b[m update
+[1;33m|[m * [31m|[m [33mcb54d5c[m update README
+[1;33m|[m * [31m|[m [33mce3eea5[m update
+[1;33m|[m [31m|[m[31m/[m  
+[1;33m|[m * [33md55951b[m update
+[1;33m|[m * [33m90ce7dc[m update
+[1;33m|[m * [33m8f32959[m[33m ([m[1;31morigin/libero[m[33m)[m update
+[1;33m|[m * [33m3f43c83[m update
+[1;33m|[m * [33m5f9ea25[m update
+[1;33m|[m * [33m8de2e05[m update
+[1;33m|[m *   [33m7f7f285[m Merge branch 'yyf_test' into libero
+[1;33m|[m [32m|[m[33m\[m  
+[1;33m|[m [32m|[m * [33md3eb7ca[m[33m ([m[1;31morigin/yyf_test[m[33m)[m Update EDP and DQL test pipelines
+[1;33m|[m [32m|[m * [33m95065b6[m Update sfBC and IDQL test pipelines
+[1;33m|[m [32m|[m * [33m3629e35[m Update IDQL test pipeline
+[1;33m|[m [32m|[m * [33m6166120[m Update replicated scripts
+[1;33m|[m [32m|[m * [33mdf94863[m Create docker installation and update DD and Diffuser tests
+[1;33m|[m * [33m|[m [33m10c2baa[m update
+[1;33m|[m * [33m|[m [33m8c5eda8[m update
+[1;33m|[m * [33m|[m [33meebd56b[m update
+[1;33m|[m * [33m|[m [33mf1f1085[m update
+[1;33m|[m * [33m|[m [33m1641e29[m update
+[1;33m|[m * [33m|[m [33mc74447a[m update
+[1;33m|[m [33m|[m[33m/[m  
+[1;33m|[m * [33m56ee1b7[m update
+[1;33m|[m * [33m1f028fe[m update
+[1;33m|[m * [33mc73d18c[m update libero
+[1;33m|[m * [33m928cb07[m update
+[1;33m|[m * [33ma1ba1df[m update
+[1;33m|[m * [33m9a2c962[m update
+[1;33m|[m * [33ma2a10a6[m update
+[1;33m|[m * [33mf6990a1[m update
+[1;33m|[m * [33mc18018c[m update
+[1;33m|[m * [33mba6c9dd[m update
+[1;33m|[m * [33m96b995d[m add notebooks
+[1;33m|[m * [33m655b108[m add notebooks
+[1;33m|[m * [33m4cae918[m update
+[1;33m|[m * [33m9ac0c66[m update
+[1;33m|[m * [33me66a36a[m update
+[1;33m|[m * [33m39f7b31[m update
+[1;33m|[m * [33m9ab1de0[m add DINOv2 condition
+[1;33m|[m * [33m456494e[m add VIP condition
+[1;33m|[m * [33mef7a24b[m add R3M condition
+[1;33m|[m * [33mfe5e623[m better schedulers
+[1;33m|[m * [33m76f2a63[m update
+[1;33m|[m * [33mc4c4d03[m better nn diffusion
+[1;33m|[m * [33me187ac4[m better nn diffusion
+[1;33m|[m * [33m677f8c9[m better datasets
+[1;33m|[m * [33mceec7ac[m update
+[1;33m|[m * [33mc2b4b21[m update
+[1;33m|[m * [33m83d698d[m better optimizers
+[1;33m|[m * [33mc1ff34c[m update
+[1;33m|[m * [33m700ff9e[m update diffusion models
+[1;33m|[m * [33mcd81678[m delete old version diffusions
+[1;33m|[m * [33m1926dea[m update nn conditions to support dict input
+[1;33m|[m * [33m2a408fc[m update
+[1;33m|[m * [33m2eef1e3[m update
+[1;33m|[m * [33m62cf494[m update diffusion models to support dict condition
+[1;33m|[m * [33m78d767a[m add ruff
+[1;33m|[m * [33mb78edeb[m update multi-view vit
+[1;33m|[m * [33m87c0b8a[m add edp, synther, dql
+[1;33m|[m * [33ma7dceab[m delete files
+[1;33m|[m * [33mb3071c2[m add synther
+[1;33m|[m * [33m7f06f9f[m add dql
+[1;33m|[m * [33m8e0ca0c[m add lightning classifier & diffuser
+[1;33m|[m * [33mdd60cd5[m tune idql
+[1;33m|[m * [33m167bbcc[m add dd for d4rl
+[1;33m|[m * [33mf704138[m add idql for d4rl
+[1;33m|[m * [33mcf41ada[m add idql for d4rl
+[1;33m|[m * [33m58724e7[m update
+[1;33m|[m * [33m75f3690[m update idql networks
+[1;33m|[m * [33m0b7a27a[m update
+[1;33m|[m * [33m5975e24[m add edm
+[1;33m|[m * [33mb681f22[m add new IQL implementation which can load from pretrained
+[1;33m|[m * [33m012a541[m update
+[1;33m|[m * [33m07e0c88[m update iql
+[1;33m|[m * [33m9b151f1[m update DD (dev)
+[1;33m|[m * [33m7a0554f[m add new components to lightning branch
+[1;33m|[m * [33m2fe3212[m add lightning version of diffusionsde
+[1;33m|[m[1;33m/[m  
+* [33mb519a2b[m add new items into .gitignore
+* [33m729f5ba[m Fixed typo
+* [33mae9c27e[m add last activation layer in IDQLMlp
+* [33m8d65899[m fix bugs
+* [33md10e393[m fix bug
+* [33m171adac[m add sfbc
+*   [33m0db5cfa[m Merge pull request #24 from hilookas/patch-1
+[34m|[m[35m\[m  
+[34m|[m * [33mf4f5299[m Temporary Fix for https://github.com/Farama-Foundation/D4RL/issues/236
+[34m|[m[34m/[m  
+* [33m845fb3b[m update README
+*   [33m0fe2b22[m Merge branch 'main' of https://github.com/CleanDiffuserTeam/CleanDiffuser into main
+[36m|[m[1;31m\[m  
+[36m|[m * [33m8b9d740[m Replace default edm to ddpm
+[36m|[m *   [33md8931dc[m Merge branch 'main' of https://github.com/CleanDiffuserTeam/CleanDiffuser into main
+[36m|[m [1;32m|[m[1;33m\[m  
+[36m|[m [1;32m|[m * [33m5757d3d[m Resolve config attribute errors for adaptdiffuser (from `args.horizon` to `args.task.horizon`) (#23)
+[36m|[m * [1;33m|[m [33m8adda45[m Update readme
+[36m|[m [1;33m|[m[1;33m/[m  
+[36m|[m * [33m9868d15[m Update readme
+* [1;33m|[m [33mb5576fd[m fix bugs
+[1;33m|[m[1;33m/[m  
+* [33m056d161[m add diffuserlite
+* [33m2b6b4b3[m fix typo
+*   [33m103fa03[m Merge pull request #22 from CleanDiffuserTeam/pip
+[1;34m|[m[1;35m\[m  
+[1;34m|[m * [33mc5574ca[m[33m ([m[1;31morigin/pip[m[33m)[m update pip install dependencies
+[1;34m|[m * [33m9061a6d[m Merge pull request #20 from imataka7/main
+[1;34m|[m[1;34m/[m[31m|[m 
+[1;34m|[m * [33m0355edd[m chore: Update pyproject.toml to include zarr, av, and dill dependencies
+[1;34m|[m * [33mc336f41[m chore: Update pyproject.toml to include zarr, av, and dill dependencies
+[1;34m|[m * [33m494c834[m chore: Update pyproject.toml to include cleandiffuser package in setuptools find
+[1;34m|[m * [33m93515bf[m chore: Update pyproject.toml license comment
+[1;34m|[m * [33m9371a7f[m chore: Refactor setup.py to fix path issue in get_version()
+[1;34m|[m * [33mea16973[m chore: Update pyproject.toml and setup.py for CleanDiffuser package
+[1;34m|[m *   [33ma9225e2[m Merge branch 'CleanDiffuserTeam:main' into main
+[1;34m|[m [32m|[m[33m\[m  
+[1;34m|[m * [33m\[m   [33m81fb510[m Merge branch 'CleanDiffuserTeam:main' into main
+[1;34m|[m [34m|[m[35m\[m [33m\[m  
+[1;34m|[m * [35m\[m [33m\[m   [33m209781b[m Merge branch 'CleanDiffuserTeam:main' into main
+[1;34m|[m [36m|[m[1;31m\[m [35m\[m [33m\[m  
+[1;34m|[m * [1;31m|[m [35m|[m [33m|[m [33mad21d20[m chore: Bump version to 0.0.2 in pyproject.toml
+[1;34m|[m * [1;31m|[m [35m|[m [33m|[m [33m782b1a3[m .
+[1;34m|[m * [1;31m|[m [35m|[m [33m|[m [33m584e0d2[m chore: Update project name and repository URL in pyproject.toml
+[1;34m|[m * [1;31m|[m [35m|[m [33m|[m [33me8b2a12[m chore: Update pyproject.toml with project information and dependencies
+* [1;31m|[m [1;31m|[m [35m|[m [33m|[m [33mb081678[m fix bug
+* [1;31m|[m [1;31m|[m [35m|[m [33m|[m [33med0a072[m Removed unnecessary code blocks and added some comments for clarity.
+* [1;31m|[m [1;31m|[m [35m|[m [33m|[m [33m6fa9c70[m Replace Pytorch3d requirements to direct rotation
+[33m|[m [1;31m|[m[33m_[m[1;31m|[m[33m_[m[35m|[m[33m/[m  
+[33m|[m[33m/[m[1;31m|[m [1;31m|[m [35m|[m   
+* [1;31m|[m [1;31m|[m [35m|[m   [33m29b97ec[m Merge branch 'main' of https://github.com/CleanDiffuserTeam/CleanDiffuser into main
+[1;32m|[m[35m\[m [1;31m\[m [1;31m\[m [35m\[m  
+[1;32m|[m [35m|[m [1;31m|[m[35m_[m[1;31m|[m[35m/[m  
+[1;32m|[m [35m|[m[35m/[m[1;31m|[m [1;31m|[m   
+[1;32m|[m * [1;31m|[m [1;31m|[m [33mbc3cca8[m Update 1_a_minimal_DBC_implementation.py
+[1;32m|[m * [1;31m|[m [1;31m|[m   [33m03e9cb3[m Merge pull request #18 from keesh0410/feature/fixReadMe
+[1;32m|[m [1;31m|[m[1;35m\[m [1;31m\[m [1;31m\[m  
+[1;32m|[m [1;31m|[m [1;35m|[m[1;31m_[m[1;31m|[m[1;31m/[m  
+[1;32m|[m [1;31m|[m[1;31m/[m[1;35m|[m [1;31m|[m   
+[1;32m|[m [1;31m|[m * [1;31m|[m [33m6579e56[m Fix typing error at ReadMe file.
+[1;32m|[m [1;31m|[m[1;31m/[m [1;31m/[m  
+* [1;31m/[m [1;31m/[m [33md7a2e2e[m add warm_start sampling for rectified flows. add new sampling schedules.
+[1;31m|[m[1;31m/[m [1;31m/[m  
+* [1;31m/[m [33m0d86300[m Update req (#17)
+[1;31m|[m[1;31m/[m  
+[1;31m|[m * [33m51408c9[m[33m ([m[1;31morigin/act[m[33m)[m Remove submodule and add act as a regular directory
+[1;31m|[m * [33mc32104c[m Update ACT with CleanDiffuser framework
+[1;31m|[m * [33mdef8df7[m Update req
+[1;31m|[m[1;31m/[m  
+*   [33m53adcf8[m Merge pull request #15 from CleanDiffuserTeam/revert-14-feature/SHD
+[31m|[m[32m\[m  
+[31m|[m * [33m6dabc98[m Revert "Feature/shd"
+[31m|[m[31m/[m  
+*   [33m991e58a[m Merge pull request #14 from CeHao-NUS/feature/SHD
+[33m|[m[34m\[m  
+[33m|[m * [33mef8d2cd[m added features
+[33m|[m * [33md90d08e[m finish naive setup
+[33m|[m *   [33m33e3fe1[m Merge pull request #2 from CeHao-NUS/feature/maze2d
+[33m|[m [35m|[m[36m\[m  
+[33m|[m [35m|[m * [33m8bcb5ff[m maze 2d is fine
+[33m|[m [35m|[m * [33m34ea89b[m model can run
+[33m|[m [35m|[m[35m/[m  
+[33m|[m * [33mdd4f9fd[m add tqdm
+[33m|[m * [33m4b5d41d[m lets test train it
+[33m|[m *   [33m7716256[m Merge pull request #1 from CeHao-NUS/feature/maze2d
+[33m|[m [1;31m|[m[1;32m\[m  
+[33m|[m [1;31m|[m * [33ma86c910[m made lets try it
+[33m|[m * [1;32m|[m [33m0fde17b[m add inference, not done.
+[33m|[m * [1;32m|[m [33m31384c9[m the basic train can run
+[33m|[m * [1;32m|[m [33m81249c7[m test classifier
+[33m|[m * [1;32m|[m [33m0c358ed[m Create shr_d4rl_antmaze.py
+[33m|[m [1;32m|[m[1;32m/[m  
+* [1;32m|[m [33mc1cbbe6[m update readme and requirements
+* [1;32m|[m [33m934c820[m fix requirements
+* [1;32m|[m   [33m5bd18df[m Merge pull request #13 from CleanDiffuserTeam/lite
+[1;33m|[m[1;34m\[m [1;32m\[m  
+[1;33m|[m * [1;32m|[m [33m84badc6[m replace `torch.from_numpy` with `torch.tensor`
+[1;33m|[m[1;33m/[m [1;32m/[m  
+* [1;32m/[m [33m1fa243c[m Add Resnet18 and ViT Image NN Conditions.
+[1;32m|[m[1;32m/[m  
+* [33mceee91c[m tutorial 1 render
+*   [33md9eba16[m Merge pull request #11 from RongXueZoe/main
+[1;35m|[m[1;36m\[m  
+[1;35m|[m * [33m5c4d1c8[m Update dp_kitchen.py
+* [1;36m|[m [33mf07dcaa[m Merge pull request #10 from RongXueZoe/main
+[31m|[m[1;36m\[m[1;36m|[m 
+[31m|[m * [33m5c292c2[m Update 3_classifier_guidance.py
+* [32m|[m [33m3f54228[m Merge pull request #9 from RongXueZoe/main
+[33m|[m[32m\[m[32m|[m 
+[33m|[m * [33m3eaa4c9[m Update 1_a_minimal_DBC_implementation.py
+[33m|[m[33m/[m  
+* [33ma6ce38a[m update readme
+*   [33m0c4581b[m Merge branch 'consistency_model' into 'main'
+[35m|[m[36m\[m  
+[35m|[m * [33mc103d02[m update
+[35m|[m * [33mc135948[m add Consistency Models
+* [36m|[m   [33m366c15c[m Merge branch 'main' of http://gitlab.beiyang.ren/YifuYuan/cleandiffuserpublic into main
+[1;31m|[m[1;32m\[m [36m\[m  
+[1;31m|[m * [36m\[m   [33m7607380[m Merge branch 'requirements' into 'main'
+[1;31m|[m [1;33m|[m[1;34m\[m [36m\[m  
+[1;31m|[m [1;33m|[m * [36m|[m [33m2e99151[m Update readme
+[1;31m|[m [1;33m|[m * [36m|[m [33m0bc34cf[m Update readme
+[1;31m|[m [1;33m|[m * [36m|[m [33mb47b690[m Update new requirements for RL, IL and Tutorials
+[1;31m|[m [1;33m|[m[1;33m/[m [36m/[m  
+* [1;33m/[m [36m/[m [33m6d49d35[m Update readme
+[1;33m|[m[1;33m/[m [36m/[m  
+* [36m|[m [33m7bb1d24[m Update readme
+* [36m|[m [33mb9234c2[m Merge branch 'main' of http://gitlab.beiyang.ren/YifuYuan/cleandiffuserpublic into main
+[1;35m|[m[36m\[m[36m|[m 
+[1;35m|[m *   [33m51a6e12[m Merge branch 'tutorials' into 'main'
+[1;35m|[m [31m|[m[32m\[m  
+[1;35m|[m [31m|[m * [33m7323ac1[m update tutorial 4
+[1;35m|[m [31m|[m * [33m525e61b[m update tutorials 1-3
+[1;35m|[m [31m|[m[31m/[m  
+* [31m/[m [33m27ef32a[m Update readme
+[31m|[m[31m/[m  
+* [33mda20b7e[m Update pdf
+* [33m5394a61[m Update pdf
+* [33ma95a64e[m Update readme
+* [33mcecfe67[m Initial commit

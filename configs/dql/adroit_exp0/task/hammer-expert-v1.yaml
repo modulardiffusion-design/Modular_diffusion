@@ -1,0 +1,4 @@
+env_name: "hammer-expert-v1"
+
+weight_temperature: 6.
+eta: 0

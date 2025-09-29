@@ -1,0 +1,4 @@
+env_name: "door-expert-v1"
+
+weight_temperature: 8.
+eta: 0

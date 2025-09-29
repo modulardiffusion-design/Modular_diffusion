@@ -1,0 +1,4 @@
+env_name: "pen-expert-v1"
+
+weight_temperature: 3.
+eta: 0.05
