@@ -1,24 +1,72 @@
-# RL Environments Installation Guide (One-Table Version)
+# MyCleanDiffuser
 
-> Tip: Each benchmark in its **own Conda env** to avoid Gym/Gymnasium & MuJoCo/mujoco-py conflicts.
-
-| Environment | Conda Env | Install Commands | Quick Test |
-|---|---|---|---|
-| **Atari (Montezuma's Revenge)** | `rl-atari` | `conda create -n rl-atari python=3.10 -y`<br>`conda activate rl-atari`<br>`pip install gymnasium gymnasium-atari autorom`<br>`python -m autorom --accept-license` | `import gymnasium as gym`<br><br>`env = gym.make("ALE/MontezumaRevenge-v5")`<br>`obs, info = env.reset(seed=0)`<br>`for _ in range(5):`<br>`    obs, r, term, trunc, info = env.step(env.action_space.sample())`<br>`    if term or trunc:`<br>`        obs, info = env.reset()`<br>`print("Atari OK")` |
-| **MiniGrid (DoorKey etc.)** | `rl-minigrid` | `conda create -n rl-minigrid python=3.10 -y`<br>`conda activate rl-minigrid`<br>`pip install minigrid gymnasium` | `import gymnasium as gym, minigrid`<br><br>`env = gym.make("MiniGrid-DoorKey-8x8-v0")`<br>`obs, info = env.reset(seed=0)`<br>`obs, r, term, trunc, info = env.step(env.action_space.sample())`<br>`print("MiniGrid OK")` |
-| **DeepMind Control Suite (DMC)** | `rl-dmc` | `conda create -n rl-dmc python=3.10 -y`<br>`conda activate rl-dmc`<br>`pip install mujoco dm_control`<br>`# headless servers:`<br>`export MUJOCO_GL=egl` | `from dm_control import suite`<br><br>`env = suite.load("cheetah", "run")`<br>`ts = env.reset()`<br>`for _ in range(5):`<br>`    action = env.action_spec().generate_value()`<br>`    ts = env.step(action)`<br>`print("DMC OK")` |
-| **Meta-World (Farama, new)** | `rl-metaworld` | `conda create -n rl-metaworld python=3.10 -y`<br>`conda activate rl-metaworld`<br>`pip install metaworld mujoco gymnasium` | `import metaworld, random`<br>`from metaworld.envs import ALL_V2_ENVIRONMENTS_GOAL_OBSERVABLE`<br><br>`env_id = random.choice(list(ALL_V2_ENVIRONMENTS_GOAL_OBSERVABLE.keys()))`<br>`env = ALL_V2_ENVIRONMENTS_GOAL_OBSERVABLE[env_id]()`<br>`obs, info = env.reset(seed=0)`<br>`obs, r, term, trunc, info = env.step(env.action_space.sample())`<br>`print("MetaWorld new OK")` |
-| **Meta-World (old, mujoco-py)** | `rl-meta-old` | `conda create -n rl-meta-old python=3.9 -y`<br>`conda activate rl-meta-old`<br>`pip install "gym==0.21.0" "mujoco-py==2.1.2.14" metaworld`<br>`# also install MuJoCo 2.1 binaries to ~/.mujoco/mujoco210`<br>`export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/.mujoco/mujoco210/bin`<br>`export MUJOCO_GL=egl` | `import metaworld`<br><br>`mt = metaworld.ML1('pick-place-v2')`<br>`env = mt.train_classes['pick-place-v2']()`<br>`obs = env.reset()`<br>`obs, r, done, info = env.step(env.action_space.sample())`<br>`print("MetaWorld old OK")` |
-| **RLBench** | `rl-rlbench` | `conda create -n rl-rlbench python=3.10 -y`<br>`conda activate rl-rlbench`<br>`# download & extract CoppeliaSim to $HOME/CoppeliaSim`<br>`# set env vars only when running RLBench:`<br>`# export COPPELIASIM_ROOT=$HOME/CoppeliaSim`<br>`# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$COPPELIASIM_ROOT`<br>`# export QT_QPA_PLATFORM_PLUGIN_PATH=$COPPELIASIM_ROOT`<br>`pip install git+https://github.com/stepjam/RLBench.git` | `import numpy as np`<br>`from rlbench.action_modes import MoveArmThenGripper`<br>`from rlbench.action_modes.arm_action_modes import JointVelocity`<br>`from rlbench.action_modes.gripper_action_modes import Discrete`<br>`from rlbench.environment import Environment`<br>`from rlbench.tasks import ReachTarget`<br><br>`env = Environment(MoveArmThenGripper(JointVelocity(), Discrete()))`<br>`env.launch(); task = env.get_task(ReachTarget)`<br>`desc, obs = task.reset()`<br>`obs, r, done = task.step(np.zeros(env.action_shape))`<br>`print("RLBench OK"); env.shutdown()` |
-| **Procgen** | `rl-procgen` | `conda create -n rl-procgen python=3.10 -y`<br>`conda activate rl-procgen`<br>`pip install procgen gymnasium` | `import gymnasium as gym, procgen`<br><br>`env = gym.make("procgen:procgen-coinrun-v0")`<br>`obs, info = env.reset(seed=0)`<br>`obs, r, term, trunc, info = env.step(env.action_space.sample())`<br>`print("Procgen OK")` |
-| **DeepMind Lab (DMLab)** | `rl-dmlab` | `conda create -n rl-dmlab python=3.10 -y`<br>`conda activate rl-dmlab`<br>`# build from source or use Docker:`<br>`# https://github.com/deepmind/lab` | `import deepmind_lab as lab`<br><br>`env = lab.Lab("seekavoid_arena_01", ["RGB_INTERLEAVED"])`<br>`obs = env.reset()`<br>`print("DMLab OK")` |
+This project is **based on [CleanDiffuser](https://github.com/CleanDiffuserTeam/CleanDiffuser)**, with some modifications and extensions on top of their excellent work.  
+Big thanks to the CleanDiffuser team for their great contribution to the community 🙏.
 
 ---
 
-### Notes
+## 🚀 Installation
 
-- **Don't mix** benchmarks in one env: Gym/Gymnasium & MuJoCo/mujoco-py conflict easily.  
-- **Headless**: set `MUJOCO_GL=egl` for MuJoCo / DMC / Meta-World / RLBench.  
-- **RLBench**: needs CoppeliaSim; export its env vars **only** when running RLBench (avoid global export).  
-- **Meta-World**: prefer the **new (Farama)** version; the old one requires `mujoco-py` + Gym 0.21 (Python 3.9).  
-- **DMLab**: heavy; Docker is often easier than local build.
+It is recommended to create an isolated environment using **conda**:
+
+```bash
+conda create -n myclean python=3.10 -y
+conda activate myclean
+cd CleanDiffuser
+pip install -r requirements.txt
+```
+
+If you prefer venv, please make sure Python 3.10 is already installed on your system.
+
+
+---
+
+## ▶️ Usage
+
+To run the main program (adjust `dql_d4rl_mujoco.py` to your actual entry script under CLEANDIFFUSER/pipelines):
+
+```bash
+python pipelines/dql_d4rl_mujoco.py
+```
+
+<!-- If additional configuration is required, you can specify it via arguments, e.g.:
+
+```bash
+python main.py --config config.yaml
+``` -->
+
+---
+
+## 📦 Dependencies
+
+All dependencies are listed in [`requirements.txt`](requirements.txt).  
+
+- For **critical dependencies** (e.g., `torch`, `mujoco`), versions are pinned to ensure compatibility.  
+- For **general utilities** (e.g., `tqdm`, `requests`), version ranges are relaxed to make installation easier.  
+
+We recommend using **conda** for complex packages (CUDA, MuJoCo, OpenCV) to avoid compilation issues.
+
+---
+
+## ❓ Issues & Support
+
+If you encounter problems during installation or running the code:  
+
+- Please open an [Issue] 
+- I’ll try my best to help  
+- Contributions via PRs are also very welcome 😃  
+
+---
+
+## 🙏 Acknowledgements
+
+This project is built upon [CleanDiffuser](https://github.com/CleanDiffuserTeam/CleanDiffuser).  
+All credits for the dataset and benchmark go to the original authors — this is a GitHub to about pretraining, modularizing, and plug-and-play modifications of the diffusion models.  
+
+---
+
+## 📄 License
+
+This repository follows the original CleanDiffuser license.  
+Please make sure to comply with the corresponding terms when using or distributing this project.  
+# Modular_diffusion
