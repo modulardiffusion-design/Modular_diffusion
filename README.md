@@ -11,8 +11,9 @@ Our goal is to refine the algorithm and enhance its capabilities.
 It is recommended to create an isolated environment using **conda**:
 
 ```bash
-conda create -n myclean python=3.10 -y
-conda activate myclean
+git clone https://github.com/modulardiffusion-design/Modular_diffusion.git
+conda create -n modular_diff python=3.10 -y
+conda activate modular_diff
 cd CleanDiffuser
 pip install -r requirements.txt
 ```
