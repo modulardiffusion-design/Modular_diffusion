@@ -2,6 +2,7 @@
 
 This project is **based on [CleanDiffuser](https://github.com/CleanDiffuserTeam/CleanDiffuser)**, with some modifications and extensions on top of their excellent work.  
 Big thanks to the CleanDiffuser team for their great contribution to the community 🙏.
+Our goal is to refine the algorithm and enhance its capabilities.
 
 ---
 
