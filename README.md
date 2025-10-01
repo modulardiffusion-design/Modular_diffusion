@@ -43,6 +43,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia
 Then reload:
 ```bash
 source ~/.bashrc
+conda activate modular_diff
 ```
 
 ### 3. Install System Dependencies (Ubuntu/Debian)
