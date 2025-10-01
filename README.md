@@ -13,7 +13,7 @@ It is recommended to create an isolated environment using **conda**:
 
 ```bash
 git clone https://github.com/modulardiffusion-design/Modular_diffusion.git
-conda create -n modular_diff python=3.9 -y
+conda create -n modular_diff python=3.10 -y
 conda activate modular_diff
 cd Modular_diffusion
 pip install -r requirements.txt
