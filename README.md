@@ -24,17 +24,9 @@ pip install -r requirements.txt
 ---
 
 ## MuJoCo Installation (Critical Step)
-
-# Create the MuJoCo directory if it does not exist
 mkdir -p ~/.mujoco
-
-# Download MuJoCo 2.1.0 archive
 wget https://mujoco.org/download/mujoco210-linux-x86_64.tar.gz
-
-# Extract the archive in the current directory
 tar -xf mujoco210-linux-x86_64.tar.gz
-
-# Move the extracted folder to ~/.mujoco and rename it
 mv mujoco210-linux-x86_64 ~/.mujoco/mujoco210
 
 
