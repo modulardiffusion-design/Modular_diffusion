@@ -25,19 +25,18 @@ pip install -r requirements.txt
 
 ## MuJoCo Installation (Critical Step)
 
-### 1. Download and Install MuJoCo 2.1
-```bash
-# Create mujoco directory
+# Create the MuJoCo directory if it does not exist
 mkdir -p ~/.mujoco
-cd ~/.mujoco
 
-# Download mujoco210
+# Download MuJoCo 2.1.0 archive
 wget https://mujoco.org/download/mujoco210-linux-x86_64.tar.gz
 
-# Extract and rename
+# Extract the archive in the current directory
 tar -xf mujoco210-linux-x86_64.tar.gz
-mv mujoco210-linux-x86_64 mujoco210
-```
+
+# Move the extracted folder to ~/.mujoco and rename it
+mv mujoco210-linux-x86_64 ~/.mujoco/mujoco210
+
 
 ### 2. Set Environment Variables
 Add these lines to your `~/.bashrc` or `~/.zshrc`:
