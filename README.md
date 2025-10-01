@@ -28,7 +28,7 @@ pip install -r requirements.txt
 mkdir -p ~/.mujoco
 wget https://mujoco.org/download/mujoco210-linux-x86_64.tar.gz
 tar -xf mujoco210-linux-x86_64.tar.gz
-mv mujoco210-linux-x86_64 ~/.mujoco/mujoco210
+mv mujoco210 ~/.mujoco/mujoco210
 ```
 
 ### 2. Set Environment Variables
