@@ -32,7 +32,7 @@ mv mujoco210 ~/.mujoco/mujoco210
 ```
 
 ### 2. Set Environment Variables
-Add these lines to your `~/.bashrc` or `~/.zshrc`:
+Add the lines proposed by your computer to your `~/.bashrc` or `~/.zshrc`, for example:
 
 ```bash
 export MUJOCO_PY_MUJOCO_PATH=~/.mujoco/mujoco210
