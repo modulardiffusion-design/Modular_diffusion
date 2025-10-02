@@ -77,7 +77,7 @@ python pipelines/dql_d4rl_mujoco.py
 # Project README
 
 <details>
-  <summary>📌 Common Issues & Solutions（点击展开/折叠）</summary>
+  <summary>📌 Common Issues & Solutions</summary>
 
 If you encounter compilation errors with `mujoco-py`, try these solutions:
 
@@ -122,7 +122,7 @@ sudo apt install build-essential
 ---
 
 <details>
-  <summary>🛠 Verification（点击展开/折叠）</summary>
+  <summary>🛠 Verification</summary>
 
 Test your installation:
 ```bash
@@ -134,7 +134,7 @@ python -c "import mujoco_py; print('MuJoCo installation successful!')"
 ---
 
 <details>
-  <summary>🙌 Acknowledgements（点击展开/折叠）</summary>
+  <summary>🙌 Acknowledgements</summary>
 
 This project is built upon CleanDiffuser.  
 All credits for the dataset and benchmark go to the original authors.
@@ -144,7 +144,7 @@ All credits for the dataset and benchmark go to the original authors.
 ---
 
 <details>
-  <summary>📜 License（点击展开/折叠）</summary>
+  <summary>📜 License</summary>
 
 This repository follows the original CleanDiffuser license.  
 Please make sure to comply with the corresponding terms when using or distributing this project.
