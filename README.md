@@ -64,7 +64,18 @@ pip install --no-cache-dir mujoco-py==2.1.2.14
 
 ---
 
-## Troubleshooting Common Compilation Issues
+
+
+## Usage
+
+To run the main program:
+```bash
+python pipelines/dql_d4rl_mujoco.py
+```
+
+---
+
+## Common Issues & Solutions
 
 If you encounter compilation errors with `mujoco-py`, try these solutions:
 
@@ -89,26 +100,6 @@ pip install -e .
 
 ---
 
-## Verification
-
-Test your installation:
-```bash
-python -c "import mujoco_py; print('MuJoCo installation successful!')"
-```
-
----
-
-## Usage
-
-To run the main program:
-```bash
-python pipelines/dql_d4rl_mujoco.py
-```
-
----
-
-## Common Issues & Solutions
-
 **Q: Compilation fails with "GL/glew.h: No such file or directory"**  
 **A:** Install the missing system dependencies:  
 ```bash
@@ -125,7 +116,12 @@ sudo apt install build-essential
 **A:** Please open an Issue with your error log and system information.
 
 ---
+## Verification
 
+Test your installation:
+```bash
+python -c "import mujoco_py; print('MuJoCo installation successful!')"
+```
 ## Acknowledgements
 This project is built upon CleanDiffuser.  
 All credits for the dataset and benchmark go to the original authors.
