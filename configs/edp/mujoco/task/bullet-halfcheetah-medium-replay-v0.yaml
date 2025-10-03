@@ -1,0 +1,4 @@
+env_name: "bullet-halfcheetah-medium-replay-v0"
+
+weight_temperature: 150.
+eta: 1.
