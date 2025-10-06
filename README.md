@@ -72,9 +72,18 @@ To run the main program:
 ```bash
 python pipelines/dql_d4rl_mujoco_GFDT.py
 ```
-# Practical Techniques
+--
+## Usage
+
+To run the main program:
+```bash
+python pipelines/dql_d4rl_mujoco_GFDT.py
+```
+--
+## Practical Techniques
 
 Be wise in guidance selection. Check and select the guidance that offered a good normalized score in the inference stage. Do not blindly select the last .pt file, as many training trials (if not every trial) have shown visible and significant performance degradation after longer training steps, a clear sign of overfitting. The quality of guidance is vitally important for the performance of GFDT. 
+
 ---
 # Project README
 
