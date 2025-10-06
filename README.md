@@ -70,7 +70,7 @@ pip install --no-cache-dir mujoco-py==2.1.2.14
 
 To run the main program:
 ```bash
-python pipelines/dql_d4rl_mujoco.py
+python pipelines/dql_d4rl_mujoco_GFDT.py
 ```
 
 ---
