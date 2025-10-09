@@ -80,6 +80,7 @@ To run the main program:
 python pipelines/dql_d4rl_mujoco_GFDT.py
 ```
 --
+
 ## model checkpoints
 Please download the checkpoints and put them in the inference location.
 https://drive.google.com/drive/folders/1Mmed8pygv2CSKkr6A9EeXW0GwIztOhez?usp=sharing
@@ -136,7 +137,7 @@ def pipeline(args):
                 # break
     save_results_to_csv(results_dict, args.pipeline_name, args.task.env_name)
 ```
-    
+</details>
 ## Practical Techniques
 
 Be wise in guidance selection. Check and select the guidance that offered a good normalized score in the inference stage. Do not blindly select the last .pt file, as many training trials (if not every trial) have shown visible and significant performance degradation after longer training steps, a clear sign of overfitting. The quality of guidance is vitally important for the performance of GFDT. 
