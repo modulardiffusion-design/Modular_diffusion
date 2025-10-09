@@ -92,10 +92,10 @@ https://drive.google.com/drive/folders/1Mmed8pygv2CSKkr6A9EeXW0GwIztOhez?usp=sha
 def pipeline(args):
     args.device = "cuda:0" if torch.cuda.is_available() else "cpu"
     set_seed(args.seed)
-    # save_path = f'results/{args.pipeline_name}/'
+    # CHANGE THESE TWO LINES⬇️ ↓ ⬇
     save_path = f'seed5432/{args.pipeline_name}/{args.task.env_name}/'
     fallback_dir = f"results/{args.pipeline_name}/pretrained"
-
+    # CHANGE THESE TWO LINES⬆️ ↑ ⬆
     env = gym.make(args.task.env_name)
     dataset = D4RLMuJoCoTDDataset(d4rl.qlearning_dataset(env), args.normalize_reward)
     dataloader = DataLoader(dataset, batch_size=args.batch_size, shuffle=True, num_workers=1, pin_memory=True, drop_last=True)
