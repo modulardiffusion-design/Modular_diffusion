@@ -80,6 +80,62 @@ To run the main program:
 python pipelines/dql_d4rl_mujoco_GFDT.py
 ```
 --
+## model checkpoints
+Please download the checkpoints and put them in the inference location.
+https://drive.google.com/drive/folders/1Mmed8pygv2CSKkr6A9EeXW0GwIztOhez?usp=sharing
+<details>
+  <summary>Location of the checkpoints</summary>
+@hydra.main(config_path="../configs/edp/mujoco", config_name="mujoco", version_base=None)
+def pipeline(args):
+    args.device = "cuda:0" if torch.cuda.is_available() else "cpu"
+    set_seed(args.seed)
+    # save_path = f'results/{args.pipeline_name}/'
+    save_path = f'seed5432/{args.pipeline_name}/{args.task.env_name}/'
+    fallback_dir = f"results/{args.pipeline_name}/pretrained"
+
+    env = gym.make(args.task.env_name)
+    dataset = D4RLMuJoCoTDDataset(d4rl.qlearning_dataset(env), args.normalize_reward)
+    dataloader = DataLoader(dataset, batch_size=args.batch_size, shuffle=True, num_workers=1, pin_memory=True, drop_last=True)
+    obs_dim, act_dim = dataset.o_dim, dataset.a_dim
+
+    # EDP-specific network architecture
+    nn_diffusion = DQLMlp(obs_dim, act_dim, emb_dim=64, timestep_emb_type="positional")
+    nn_condition = IdentityCondition(dropout=0.0)
+    actor = DiscreteDiffusionSDE(
+        nn_diffusion, nn_condition, predict_noise=False, 
+        optim_params={"lr": args.actor_learning_rate},
+        x_max=+1. * torch.ones((1, act_dim), device=args.device),
+        x_min=-1. * torch.ones((1, act_dim), device=args.device),
+        diffusion_steps=args.diffusion_steps, ema_rate=args.ema_rate, 
+        device=args.device)
+
+    # EDP uses DQLCritic instead of IDQL's Q and V networks
+    critic = DQLCritic(obs_dim, act_dim, hidden_dim=args.hidden_dim).to(args.device)
+    critic_target = deepcopy(critic).requires_grad_(False).eval()
+
+    env_eval = gym.vector.make(args.task.env_name, args.num_envs)
+    env_eval.env_name = args.task.env_name
+    guidance_dirs = sorted(get_guidance_dirs(save_path))
+    
+    for g_dir in guidance_dirs:
+        guidance_name = os.path.basename(g_dir)
+        print(guidance_name)
+
+        step_ckpt_pairs = sorted(get_ckpts_with_fallback(g_dir, fallback_dir),reverse=True)
+        if not step_ckpt_pairs:
+            print(f"⚠️ No ckpt found in {guidance_name}")
+            continue
+        
+        sparse = 0
+        for step, diff_ckpt, critic_ckpt in step_ckpt_pairs:
+            # if step>200000 :
+                load_ckpt_and_inference(
+                guidance_name, step, actor, critic, critic_target,
+                diff_ckpt, critic_ckpt, args, dataset, env_eval)
+                # break
+    save_results_to_csv(results_dict, args.pipeline_name, args.task.env_name)
+
+    
 ## Practical Techniques
 
 Be wise in guidance selection. Check and select the guidance that offered a good normalized score in the inference stage. Do not blindly select the last .pt file, as many training trials (if not every trial) have shown visible and significant performance degradation after longer training steps, a clear sign of overfitting. The quality of guidance is vitally important for the performance of GFDT. 
