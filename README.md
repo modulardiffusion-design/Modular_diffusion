@@ -139,6 +139,7 @@ def pipeline(args):
     save_results_to_csv(results_dict, args.pipeline_name, args.task.env_name)
 ```
 </details>
+
 ## Practical Techniques
 
 Be wise in guidance selection. Check and select the guidance that offered a good normalized score in the inference stage. Do not blindly select the last .pt file, as many training trials (if not every trial) have shown visible and significant performance degradation after longer training steps, a clear sign of overfitting. The quality of guidance is vitally important for the performance of GFDT. 
