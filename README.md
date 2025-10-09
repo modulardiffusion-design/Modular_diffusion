@@ -85,6 +85,7 @@ Please download the checkpoints and put them in the inference location.
 https://drive.google.com/drive/folders/1Mmed8pygv2CSKkr6A9EeXW0GwIztOhez?usp=sharing
 <details>
   <summary>Location of the checkpoints</summary>
+```
 @hydra.main(config_path="../configs/edp/mujoco", config_name="mujoco", version_base=None)
 def pipeline(args):
     args.device = "cuda:0" if torch.cuda.is_available() else "cpu"
@@ -134,7 +135,7 @@ def pipeline(args):
                 diff_ckpt, critic_ckpt, args, dataset, env_eval)
                 # break
     save_results_to_csv(results_dict, args.pipeline_name, args.task.env_name)
-
+```
     
 ## Practical Techniques
 
