@@ -82,7 +82,7 @@ python pipelines/dql_d4rl_mujoco_GFDT.py
 --
 
 ## model checkpoints
-Please download the checkpoints and put them in the inference location.
+Please download the checkpoints and put them in the inference location. In these folders, there is a branch called D_GFDT, which means we select a good performance guidance to guide the GFDT in the inference stage; this is a technique to improve performance. Since the performance of the seed is crucial for the performance of GFDT, this trick is particularly effective when the external seed performs exceptionally well. For example, you have a GFDT and later, in another trial, you obtain a highly effective guidance model. This guidance module can be applied to replace the GFDT's original guidance, offering exceptional performance.
 https://drive.google.com/drive/folders/1Mmed8pygv2CSKkr6A9EeXW0GwIztOhez?usp=sharing
 <details>
   <summary>Location of the checkpoints</summary>
